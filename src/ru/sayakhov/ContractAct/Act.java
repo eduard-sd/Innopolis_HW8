@@ -1,35 +1,44 @@
 package ru.sayakhov.ContractAct;
 
-import java.time.LocalDate;
+
+import java.util.Arrays;
 
 public class Act {
-    static int number;
-    static String date;
-    static String[] productList;
+    private int number;
+    private String date;
+    private String[] productList;
 
-    public static int getNumber() {
+    public  int getNumber() {
         return number;
     }
 
-    public static void setNumber(int number) {
-        Act.number = number;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
-    public static String getDate() {
+    public  String getDate() {
         return date;
     }
 
-    public static void setDate(String date) {
-        Act.date = date;
+    public  void setDate(String date) {
+        this.date = date;
     }
 
-    public static String[] getProductList() {
+    public  String[] getProductList() {
         return productList;
     }
 
-    public static void setProductList(String[] productList) {
-        Act.productList = productList;
+    public  void setProductList(String[] productList) {
+        this.productList = productList;
     }
 
+    @Override
+    public String toString() {
+        return "Act{" +
+                "number=" + number +
+                ", date='" + date + '\'' +
+                ", productList=" + Arrays.toString(productList) +
+                '}';
+    }
 }
 

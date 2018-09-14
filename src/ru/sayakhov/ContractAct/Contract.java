@@ -1,10 +1,18 @@
 package ru.sayakhov.ContractAct;
 
 
-public class Сontract {
+import java.util.Arrays;
+
+public class Contract {
     private int number;
     private String date;
     private String[] productList;
+
+    public Contract(int number, String date, String[] productList) {
+        this.number = number;
+        this.date = date;
+        this.productList = productList;
+    }
 
     public  int getNumber() {
         return number;
@@ -30,4 +38,12 @@ public class Сontract {
         this.productList = productList;
     }
 
+    @Override
+    public String toString() {
+        return "Contract{" +
+                "number=" + number +
+                ", date='" + date + '\'' +
+                ", productList=" + Arrays.toString(productList) +
+                '}';
+    }
 }
